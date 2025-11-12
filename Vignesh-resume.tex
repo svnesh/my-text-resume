@@ -1,0 +1,136 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.92, top=.35in, bottom=.35in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{8pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Vignesh Srinivasan} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{\faEnvelope} s.vnesh@gmail.com $|$ {\faMobile} +91 9884276176} \\[3pt]
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} github.com/svnesh}} $|$ \underline{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/s-vignesh-a74a9925}}}\\[8pt]
+\end{tabularx}
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Languages:} JavaScript, TypeScript, Python, SQL\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Tools:} NodeJS, NestJS, AWS, S3, EC2, Lambda, ReactJS\\[3pt]
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Krion Consulting Pvt Ltd, Chennai}} \hfill \color[HTML]{371e77} Feb 2023 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Developer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed an event-driven notification module in NestJS using Node.js EventEmitter, enabling real-time user alerts and monitoring of system-level events.
+        \item Designed and implemented a hierarchical folder management backend using NestJS (Node.js), supporting dynamic nested parent–child relationships similar to an operating system’s file structure.
+        \item Implemented a secure login API in Node.js/NestJS with request rate-limiting to prevent DoS attacks and ensure system reliability.
+        \item \textbf{Tech stack:} NodeJS, NestJS, MS SQL Server, TypeORM, AWS, S3
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{Straive, Chennai}} \hfill \color[HTML]{371e77} Apr 2020 - Oct 2022 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Senior Executive}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a File Tracker Management System for Adobe InDesign CC using Node.js, JavaScript, HTML5, and CSS3, enabling users to manage file status and permissions directly within the application — reducing file tracking time by 40\% and improving workflow transparency.
+        \item Implemented an InDesign Server–based preprocessing and automated typesetting workflow using Node.js in HTML5-based extension, streamlining production operations and cutting manual intervention by 60\%.
+        \item \textbf{Tech stack:} NodeJS, JavaScript, XML, XSLT, HTML5, CSS3
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Straive, Chennai} \hfill \color[HTML]{371e77} Apr 2016 - Mar 2020 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Technology Associate}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Created automation workflows to reduce manual effort for XML-based typesetting projects.
+        \item Received positive client feedback for automation delivering 500,000 proof pages with high quality.
+        \item \textbf{Tech stack:} Adobe InDesign Extendscript, XML, XSLT
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{University of Madras, Chennai} & \hfill \color[HTML]{371e77} 2013 \\
+\color[HTML]{371e77} Master of Computer Applications & \hfill \color[HTML]{4B28A4} \textit{\textbf{Percentage: 63\%}} \\
+\end{tabularx}\\[3pt]
+
+% Projects
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{NestJS e-commerce API with GraphQL:} Implemented JWT access and refresh token authentication with AuthGuard, custom decorators for extracting current user, and role-based authorization. Included user, product, and category modules with GraphQL queries and mutations.
+        \item \textbf{NestJS simple blog API:} Implemented JWT authentication for controllers, integrated Cloudinary for image uploads, created custom validation pipes for file size, format, and caption restrictions, and added a middleware with Winston logger to capture errors and request/response logs.
+        \item \textbf{News article web scraping:} Used Scrapy to extract one year of newspaper archive articles, storing details like date, title, and content in a MySQL database.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Additional Info section (to fill page)
+\section{Additional Information}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+    \item Proficient in building RESTful and GraphQL APIs with NestJS and Node.js.
+    \item Experience integrating AWS services such as S3, EC2, and Lambda into production applications.
+    \item Strong background in automation workflows, optimizing repetitive tasks, and improving team efficiency.
+\end{itemize}
+
+\end{document}
