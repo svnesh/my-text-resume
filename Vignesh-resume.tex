@@ -44,8 +44,13 @@
 
 % For underline
 \usepackage[normalem]{ulem}
-
-\setmainfont{Arial}  % Set it to whatever you like
+% Use a sans-serif default font for pdflatex (\setmainfont requires Xe/LuaLaTeX)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% Font Awesome icons (pdflatex-friendly)
+\usepackage{fontawesome}
 
 \begin{document}
 
